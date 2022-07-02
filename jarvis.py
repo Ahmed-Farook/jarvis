@@ -30,7 +30,7 @@ def take_command():
             command = listener.recognize_google(voice, language="en-in")
             print(command)
     except Exception:
-       print(Exeption)
+       print(Exception)
     return command
 
 
