@@ -29,10 +29,8 @@ def take_command():
             voice = listener.listen(source)
             command = listener.recognize_google(voice, language="en-in")
             print(command)
-    except Exception as e:
-        print(e)
-        print("Didn't get you. Please say again")
-        return "none"
+    except Exception:
+       print(Exeption)
     return command
 
 
@@ -65,12 +63,8 @@ def run_jarvis():
         talk(pyjokes.get_joke)
 
     elif "how are you" in command:
-        talk("I am doing good, Ahmed")
+        talk("I am doing good, Boss")
 
-    elif "code" in command:
-        bashCommand = "code"
-        process = subprocess.Popen(bashCommand.split(), stdout=subprocess.PIPE)
-        output, error = process.communicate()
 
 
 
